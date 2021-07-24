@@ -1,6 +1,6 @@
 {
 	"name": "svelte-fast-marquee",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "A Marquee component for Svelte inspired by react-fast-marquee.",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
