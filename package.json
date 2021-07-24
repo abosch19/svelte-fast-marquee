@@ -1,12 +1,37 @@
 {
-  "name": "svelte-fast-marquee",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "svelte-fast-marquee",
+	"version": "1.0.0",
+	"description": "A Marquee component for Svelte inspired by react-fast-marquee.",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"svelte": "src/index.js",
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w"
+	},
+	"keywords": [
+		"svelte",
+		"marquee",
+		"svelte-component",
+		"fast-marquee"
+	],
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/abosch19/svelte-fast-marquee"
+	},
+	"bugs": {
+		"url": "https://github.com/abosch19/svelte-fast-marquee/issues"
+	},
+	"author": {
+		"email": "abosch19@gmail.com",
+		"name": "Alex Bosch",
+		"url": "https://github.com/abosch19"
+	},
+	"devDependencies": {
+		"rollup": "^2.53.3",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-svelte": "^7.1.0",
+		"svelte": "^3.40.2"
+	}
 }
