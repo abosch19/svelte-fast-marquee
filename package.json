@@ -5,15 +5,17 @@
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"svelte": "src/index.js",
+	"type": "module",
 	"scripts": {
 		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"prepublish": "npm run build"
+		"build:watch": "rollup -c -w",
+		"prepublishOnly": "npm run build"
 	},
 	"keywords": [
 		"svelte",
 		"marquee",
 		"svelte-component",
+		"component",
 		"fast-marquee"
 	],
 	"license": "ISC",
@@ -30,8 +32,8 @@
 		"url": "https://github.com/abosch19"
 	},
 	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^13.0.4",
 		"rollup": "^2.53.3",
-		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-svelte": "^7.1.0",
 		"svelte": "^3.40.2"
 	}

@@ -1,23 +1,26 @@
 <script>
   import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  import Marquee from 'svelte-fast-marquee'
 </script>
 
 <main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello world!</h1>
+  <h1>svelte-fast-marquee</h1>
 
-  <Counter />
-
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
+  <Marquee>
+    <p>
+      Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
+      apps.
+    </p>  
+    <p>
+      Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
+      the officially supported framework, also powered by Vite!
+    </p>
+  </Marquee>
+  <Marquee>
+    <img src={logo} alt="Svelte Logo" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="NPM"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Github"/>
+  </Marquee>
 </main>
 
 <style>
@@ -35,6 +38,7 @@
   img {
     height: 16rem;
     width: 16rem;
+    margin: 0 50px;
   }
 
   h1 {
