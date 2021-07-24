@@ -13,6 +13,6 @@
     "vite": "^2.4.3"
   },
   "dependencies": {
-    "svelte-fast-marquee": "0.0.1"
+    "svelte-fast-marquee": "0.1.1"
   }
 }
