@@ -1,6 +1,13 @@
 # Svelte Fast Marquee
 A Marquee component for Svelte inspired by [react-fast-marquee](https://github.com/justin-chu/react-fast-marquee).
 
+[![npm](https://img.shields.io/npm/v/svelte-fast-marquee.svg)](https://www.npmjs.com/package/svelte-fast-marquee)
+[![npm license](https://img.shields.io/npm/l/svelte-fast-marquee.svg)](https://www.npmjs.com/package/svelte-fast-marquee)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/svelte-fast-marquee.svg)](https://bundlephobia.com/result?p=svelte-fast-marquee)
+[![npm type definitions](https://img.shields.io/npm/types/svelte-fast-marquee.svg)](https://www.npmjs.com/package/svelte-fast-marquee)
+
+[!Demo](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)
+
 ## Demo
 Check out the demo [here](https://svelte.dev/repl/77064782be93415ab6370a4025778fb0?version=3.40.2) and play around with some sample marquees.
 
@@ -35,7 +42,7 @@ Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
 
 A sample file might look like this:
 
-```js
+```jsx
 <script>
     import MyComponent from "../components/MyComponent";
     import Marquee from "react-fast-marquee";
