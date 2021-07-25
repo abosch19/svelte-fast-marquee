@@ -6,7 +6,8 @@ A Marquee component for Svelte inspired by [react-fast-marquee](https://github.c
 [![npm bundle size](https://img.shields.io/bundlephobia/min/svelte-fast-marquee.svg)](https://bundlephobia.com/result?p=svelte-fast-marquee)
 [![npm type definitions](https://img.shields.io/npm/types/svelte-fast-marquee.svg)](https://www.npmjs.com/package/svelte-fast-marquee)
 
-[![demo]](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)
+[![demogif](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)
+
 
 ## Demo
 Check out the demo [here](https://svelte.dev/repl/77064782be93415ab6370a4025778fb0?version=3.40.2) and play around with some sample marquees.
