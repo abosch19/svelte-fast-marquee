@@ -10,7 +10,8 @@
 	"scripts": {
 		"build": "rollup -c",
 		"build:watch": "rollup -c -w",
-		"prepublishOnly": "npm run build"
+		"svelte-check": "svelte-check",
+		"prepublishOnly": "npm run svelte-checkk && npm run build"
 	},
 	"files": [
 		"types",
@@ -42,6 +43,7 @@
 		"rollup": "^2.53.3",
 		"rollup-plugin-svelte": "^7.1.0",
 		"sveld": "^0.8.2",
-		"svelte": "^3.40.2"
+		"svelte": "^3.40.2",
+		"svelte-check": "^2.2.3"
 	}
 }
