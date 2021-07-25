@@ -1,6 +1,6 @@
 {
 	"name": "svelte-fast-marquee",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "A Marquee component for Svelte inspired by react-fast-marquee.",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
@@ -25,7 +25,7 @@
 		"component",
 		"fast-marquee"
 	],
-	"license": "ISC",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/abosch19/svelte-fast-marquee"
