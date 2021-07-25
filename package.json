@@ -11,7 +11,7 @@
 		"build": "rollup -c",
 		"build:watch": "rollup -c -w",
 		"svelte-check": "svelte-check",
-		"prepublishOnly": "npm run svelte-checkk && npm run build"
+		"prepublishOnly": "npm run svelte-check && npm run build"
 	},
 	"files": [
 		"types",
