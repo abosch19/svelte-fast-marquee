@@ -1,4 +1,12 @@
-<div class="marquee-container">
+<script>
+	export let pauseOnHover = true
+
+	$: _style = `
+		--pause-on-hover: ${pauseOnHover ? 'paused' : 'running'}
+	`
+</script>
+
+<div class="marquee-container" style={_style}>
 	<div class="marquee">
 		<slot />
 	</div>
@@ -14,6 +22,11 @@
 	flex-direction: row;
 	position: relative;
 }
+
+.marquee-container:hover .marquee{
+	animation-play-state: var(--pause-on-hover);
+}
+
 .marquee {
 	flex: 0 0 auto;
 	min-width: 100%;
@@ -25,6 +38,7 @@
 	animation-play-state: running;
 	animation-direction: normal;
 }
+
 @keyframes scroll {
 	0% {
 		transform: translateX(0%);
