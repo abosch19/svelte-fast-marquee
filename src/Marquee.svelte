@@ -1,6 +1,18 @@
 <script>
+	/**
+	 * Pause on hover
+	 * @type {booleaan}
+	 */
 	export let pauseOnHover = false
+	/**
+ 	 * Pause on click
+ 	 * @type {boolean}
+ 	 */
 	export let pauseOnClick = false
+	/**
+ 	 * Specify the kind of button
+ 	 * @type {"left" | "right"}
+ 	 */
 	export let direction = 'left'
 
 	$: _style = `
