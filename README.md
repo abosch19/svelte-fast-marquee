@@ -35,7 +35,7 @@ import Marquee from "svelte-fast-marquee";
 
 Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
 
-```js
+```svelte
 <Marquee>
   I can be a Svelte component, multiple Svelte components, or just some text.
 </Marquee>
@@ -43,10 +43,10 @@ Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
 
 A sample file might look like this:
 
-```jsx
+```svelte
 <script>
-    import MyComponent from "../components/MyComponent";
-    import Marquee from "react-fast-marquee";
+    import MyComponent from '../components/MyComponent';
+    import Marquee from 'svelte-fast-marquee';
 </script>
 <Marquee>
     <MyComponent />
@@ -59,6 +59,7 @@ A sample file might look like this:
 
 | Property        | Type                        | Default           | Description                                              |
 | :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
+| `play`          | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
 | `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
 | `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
 | `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
