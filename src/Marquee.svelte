@@ -1,7 +1,7 @@
 <script>
 	/**
 	 * Pause on hover
-	 * @type {booleaan}
+	 * @type {boolean}
 	 */
 	export let pauseOnHover = false
 	/**
@@ -10,10 +10,19 @@
  	 */
 	export let pauseOnClick = false
 	/**
- 	 * Specify the kind of button
+ 	 * Animation direction
  	 * @type {"left" | "right"}
  	 */
 	export let direction = 'left'
+
+	/**
+ 	 * Animation speed calculated as pixels/second
+ 	 * @type {number}
+ 	 */
+	  export let speed = 100
+
+	  let containerWidth;
+	  $: duration = containerWidth / speed;
 
 	$: _style = `
 		--pause-on-hover: ${pauseOnHover ? 'paused' : 'running'};
@@ -22,10 +31,12 @@
 
 	$: _marqueeStyle = `
 		--direction: ${direction === 'left' ? 'normal' : 'reverse'};
+		--duration: ${duration}s;
 	`
+
 </script>
 
-<div class="marquee-container" style={_style}>
+<div class="marquee-container" style={_style} bind:clientWidth={containerWidth}>
 	<div class="marquee" style={_marqueeStyle}>
 		<slot />
 	</div>
@@ -58,7 +69,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	animation: scroll 10s linear 0s infinite;
+	animation: scroll var(--duration) linear 0s infinite;
 	animation-play-state: running;
 	animation-direction: normal;
 	animation-direction: var(--direction);

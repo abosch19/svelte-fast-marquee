@@ -6,7 +6,7 @@
 <main>
   <h1>svelte-fast-marquee</h1>
 
-  <Marquee>
+  <Marquee speed={50}>
     <p>
       Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
       apps.
@@ -16,7 +16,7 @@
       the officially supported framework, also powered by Vite!
     </p>
   </Marquee>
-  <Marquee direction='right'>
+  <Marquee direction='right' speed={500}>
     <img src={logo} alt="Svelte Logo" />
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="NPM"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Github"/>

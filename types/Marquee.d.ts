@@ -6,7 +6,7 @@ export interface MarqueeProps {
    * Pause on hover
    * @default false
    */
-  pauseOnHover?: booleaan;
+  pauseOnHover?: boolean;
 
   /**
    * Pause on click
@@ -15,10 +15,16 @@ export interface MarqueeProps {
   pauseOnClick?: boolean;
 
   /**
-   * Specify the kind of button
+   * Animation direction
    * @default 'left'
    */
   direction?: "left" | "right";
+
+  /**
+   * Animation speed calculated as pixels/second
+   * @default 100
+   */
+  speed?: number;
 }
 
 export default class Marquee extends SvelteComponentTyped<
