@@ -19,7 +19,13 @@
  	 * Animation speed calculated as pixels/second
  	 * @type {number}
  	 */
-	  export let speed = 100
+	export let speed = 100
+
+	/**
+ 	 * Animation state
+ 	 * @type {boolean}
+ 	 */
+	export let play = true
 
 	  let containerWidth;
 	  $: duration = containerWidth / speed;
@@ -30,6 +36,7 @@
 	`
 
 	$: _marqueeStyle = `
+		--play: ${play ? 'running' : 'paused'};
 		--direction: ${direction === 'left' ? 'normal' : 'reverse'};
 		--duration: ${duration}s;
 	`
@@ -70,7 +77,7 @@
 	flex-direction: row;
 	align-items: center;
 	animation: scroll var(--duration) linear 0s infinite;
-	animation-play-state: running;
+	animation-play-state: var(--play);
 	animation-direction: normal;
 	animation-direction: var(--direction);
 }

@@ -25,6 +25,12 @@ export interface MarqueeProps {
    * @default 100
    */
   speed?: number;
+
+  /**
+   * Animation state
+   * @default true
+   */
+  play?: boolean;
 }
 
 export default class Marquee extends SvelteComponentTyped<
