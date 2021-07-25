@@ -1,8 +1,10 @@
 <script>
-	export let pauseOnHover = true
+	export let pauseOnHover = false
+	export let pauseOnClick = false
 
 	$: _style = `
-		--pause-on-hover: ${pauseOnHover ? 'paused' : 'running'}
+		--pause-on-hover: ${pauseOnHover ? 'paused' : 'running'};
+		--pause-on-click: ${pauseOnClick ? 'paused' : 'running'};
 	`
 </script>
 
@@ -23,8 +25,12 @@
 	position: relative;
 }
 
-.marquee-container:hover .marquee{
+.marquee-container:hover .marquee {
 	animation-play-state: var(--pause-on-hover);
+}
+
+.marquee-container:active .marquee {
+	animation-play-state: var(--pause-on-click);
 }
 
 .marquee {
