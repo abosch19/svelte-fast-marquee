@@ -18,8 +18,39 @@ yarn add svelte-fast-marquee
 ```
 
 ## Usage
-To use the component, first import Marquee into your file:
+
+To use the component, first import `Marquee` into your file:
 
 ```js
 import Marquee from "svelte-fast-marquee";
 ```
+
+Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
+
+```js
+<Marquee>
+  I can be a Svelte component, multiple Svelte components, or just some text.
+</Marquee>
+```
+
+A sample file might look like this:
+
+```js
+<script>
+    import MyComponent from "../components/MyComponent";
+    import Marquee from "react-fast-marquee";
+</script>
+<Marquee>
+    <MyComponent />
+    <MyComponent />
+    <MyComponent />
+</Marquee>
+```
+
+## Props
+
+| Property        | Type                        | Default           | Description                                              |
+| :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
+| `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
+| `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
+| `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
