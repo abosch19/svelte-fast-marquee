@@ -16,7 +16,7 @@
       the officially supported framework, also powered by Vite!
     </p>
   </Marquee>
-  <Marquee>
+  <Marquee direction='right'>
     <img src={logo} alt="Svelte Logo" />
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="NPM"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Github"/>

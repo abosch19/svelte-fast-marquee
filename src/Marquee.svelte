@@ -1,21 +1,27 @@
 <script>
 	export let pauseOnHover = false
 	export let pauseOnClick = false
+	export let direction = 'left'
 
 	$: _style = `
 		--pause-on-hover: ${pauseOnHover ? 'paused' : 'running'};
 		--pause-on-click: ${pauseOnClick ? 'paused' : 'running'};
 	`
+
+	$: _marqueeStyle = `
+		--direction: ${direction === 'left' ? 'normal' : 'reverse'};
+	`
 </script>
 
 <div class="marquee-container" style={_style}>
-	<div class="marquee">
+	<div class="marquee" style={_marqueeStyle}>
 		<slot />
 	</div>
-	<div class="marquee">
+	<div class="marquee" style={_marqueeStyle}>
 		<slot />
 	</div>
 </div>
+
 <style>
 .marquee-container {
 	display: flex;
@@ -43,6 +49,7 @@
 	animation: scroll 10s linear 0s infinite;
 	animation-play-state: running;
 	animation-direction: normal;
+	animation-direction: var(--direction);
 }
 
 @keyframes scroll {
