@@ -43,7 +43,7 @@
 
 </script>
 
-<div class="marquee-container" style={_style} bind:clientWidth={containerWidth}>
+<div class={`marquee-container ${$$restProps.class ?? ''}`} style={_style} bind:clientWidth={containerWidth}>
 	<div class="marquee" style={_marqueeStyle}>
 		<slot />
 	</div>
