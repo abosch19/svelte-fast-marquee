@@ -6,7 +6,7 @@
 <main>
   <h1>svelte-fast-marquee</h1>
 
-  <Marquee speed={50}>
+  <Marquee speed={10}>
     <p>
       Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
       apps.
