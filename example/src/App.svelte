@@ -6,7 +6,7 @@
 <main>
   <h1>svelte-fast-marquee</h1>
 
-  <Marquee speed={10} gradient>
+  <Marquee class="firstMarquee" speed={10} gradient>
     <p>
       Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
       apps.
@@ -48,22 +48,14 @@
     font-weight: 100;
     line-height: 1.1;
     margin: 2rem auto;
-    max-width: 14rem;
   }
 
   p {
-    max-width: 14rem;
-    margin: 1rem auto;
+    margin: 0 4rem;
     line-height: 1.35;
   }
 
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
+  :global(.firstMarquee) {
+    margin-bottom: 50px;
   }
 </style>

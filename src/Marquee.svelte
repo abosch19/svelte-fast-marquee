@@ -35,7 +35,7 @@
 
 	let containerWidth;
 	let marqueeWidth;
-	
+
 	$: duration =
 		marqueeWidth < containerWidth
 			? containerWidth / speed
@@ -76,6 +76,7 @@
 		overflow-x: hidden;
 		flex-direction: row;
 		position: relative;
+		width: var(--width);
 	}
 
 	.marquee-container:hover .marquee {
@@ -87,15 +88,14 @@
 	}
 
 	.marquee {
-		display: flex;
-		width: 100%;
 		flex: 0 0 auto;
+		min-width: 100%;
 		z-index: 1;
+		display: flex;
 		flex-direction: row;
 		align-items: center;
 		animation: scroll var(--duration) linear infinite;
 		animation-play-state: var(--play);
-		animation-direction: normal;
 		animation-direction: var(--direction);
 	}
 
@@ -106,6 +106,13 @@
 		100% {
 			transform: translateX(-100%);
 		}
+	}
+
+	.initial-child-container {
+		flex: 0 0 auto;
+		display: flex;
+		min-width: auto;
+		flex-direction: row;
 	}
 
 	.gradient::after,
