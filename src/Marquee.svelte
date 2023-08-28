@@ -27,11 +27,19 @@
 	 */
 	export let play = true;
 
+	/**
+	 * Show lateral gradient
+	 * @type {boolean}
+	 */
+	export let gradient = false;
+
 	let containerWidth;
 	let marqueeWidth;
-	$: duration = marqueeWidth < containerWidth ? containerWidth / speed: marqueeWidth / speed;
-	$: console.log(containerWidth + "  px");
-	$: console.log(duration + "  s");
+	
+	$: duration =
+		marqueeWidth < containerWidth
+			? containerWidth / speed
+			: marqueeWidth / speed;
 
 	$: _style = `
 		--pause-on-hover: ${pauseOnHover ? "paused" : "running"};
@@ -45,7 +53,14 @@
 	`;
 </script>
 
-<div class={`marquee-container ${$$restProps.class ?? ''}`} style={_style} bind:clientWidth={containerWidth}>
+<div
+	class={`marquee-container ${$$restProps.class ?? ""}`}
+	style={_style}
+	bind:clientWidth={containerWidth}
+>
+	{#if gradient}
+		<div class="gradient" />
+	{/if}
 	<div class="marquee" style={_marqueeStyle} bind:clientWidth={marqueeWidth}>
 		<slot />
 	</div>
@@ -91,5 +106,26 @@
 		100% {
 			transform: translateX(-100%);
 		}
+	}
+
+	.gradient::after,
+	.gradient::before {
+		background: linear-gradient(to right, white, transparent);
+		content: "";
+		height: 100%;
+		position: absolute;
+		width: 10%;
+		z-index: 2;
+	}
+
+	.gradient::before {
+		left: 0;
+		top: 0;
+	}
+
+	.gradient::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
 	}
 </style>
