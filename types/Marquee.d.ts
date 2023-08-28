@@ -16,7 +16,7 @@ export interface MarqueeProps {
 
   /**
    * Animation direction
-   * @default 'left'
+   * @default "left"
    */
   direction?: "left" | "right";
 
@@ -31,6 +31,12 @@ export interface MarqueeProps {
    * @default true
    */
   play?: boolean;
+
+  /**
+   * Show lateral gradient
+   * @default false
+   */
+  gradient?: boolean;
 }
 
 export default class Marquee extends SvelteComponentTyped<
