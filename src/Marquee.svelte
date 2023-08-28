@@ -76,7 +76,6 @@
 		overflow-x: hidden;
 		flex-direction: row;
 		position: relative;
-		width: var(--width);
 	}
 
 	.marquee-container:hover .marquee {
