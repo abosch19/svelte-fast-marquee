@@ -63,3 +63,4 @@ A sample file might look like this:
 | `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
 | `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
 | `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
+| `gradient`      | `boolean`                   | `false`           | Whether to show a gradient on right and left             |
