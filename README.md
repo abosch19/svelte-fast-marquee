@@ -59,6 +59,7 @@ A sample file might look like this:
 
 | Property        | Type                        | Default           | Description                                              |
 | :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
+| `class`         | `string`                    | ``                | The name of the css class to style the container div.    |
 | `play`          | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
 | `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
 | `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
