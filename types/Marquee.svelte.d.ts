@@ -1,5 +1,4 @@
-/// <reference types="svelte" />
-import { SvelteComponentTyped } from "svelte";
+import type { SvelteComponentTyped } from "svelte";
 
 export interface MarqueeProps {
   /**
@@ -37,10 +36,16 @@ export interface MarqueeProps {
    * @default false
    */
   gradient?: boolean;
+
+  /**
+   * Custom class
+   * @default ""
+   */
+  class?: string;
 }
 
 export default class Marquee extends SvelteComponentTyped<
   MarqueeProps,
-  {},
+  Record<string, any>,
   { default: {} }
 > {}
