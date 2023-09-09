@@ -33,6 +33,13 @@
 	 */
 	export let gradient = false;
 
+	let className = "";
+	/**
+	 * Custom class
+	 * @type {string}
+	 */
+	 export { className as class };
+
 	let containerWidth;
 	let marqueeWidth;
 
@@ -51,10 +58,12 @@
 		--direction: ${direction === "left" ? "normal" : "reverse"};
 		--duration: ${duration}s;
 	`;
+
+	$: console.log(className);
 </script>
 
 <div
-	class={`marquee-container ${$$restProps.class ?? ""}`}
+	class="marquee-container {className}"
 	style={_style}
 	bind:clientWidth={containerWidth}
 >
