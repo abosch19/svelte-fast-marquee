@@ -37,12 +37,6 @@ export interface MarqueeProps {
    * @default false
    */
   gradient?: boolean;
-
-  /**
-   * CSS class
-   * @default ""
-   * */
-  class?: string;
 }
 
 export default class Marquee extends SvelteComponentTyped<

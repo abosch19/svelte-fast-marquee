@@ -1,75 +1,51 @@
 {
-	"name": "svelte-fast-marquee",
-	"version": "0.5.0",
-	"description": "A Marquee component for Svelte inspired by react-fast-marquee.",
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"svelte": "src/index.js",
-	"types": "types/index.d.ts",
-	"type": "module",
-	"scripts": {
-		"build": "rollup -c",
-		"build:watch": "rollup -c -w",
-		"test": "jest",
-		"test:watch": "npm run test -- --watch",
-		"svelte-check": "svelte-check",
-		"prepublishOnly": "npm run svelte-check && npm run test && npm run build"
-	},
-	"files": [
-		"types",
-		"dist",
-		"src"
-	],
-	"keywords": [
-		"svelte",
-		"marquee",
-		"svelte-component",
-		"component",
-		"fast-marquee"
-	],
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/abosch19/svelte-fast-marquee"
-	},
-	"bugs": {
-		"url": "https://github.com/abosch19/svelte-fast-marquee/issues"
-	},
-	"author": {
-		"email": "abosch19@gmail.com",
-		"name": "Alex Bosch",
-		"url": "https://github.com/abosch19"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.14.8",
-		"@babel/preset-env": "^7.14.8",
-		"@rollup/plugin-node-resolve": "^13.0.4",
-		"@testing-library/jest-dom": "^5.14.1",
-		"@testing-library/svelte": "^3.0.3",
-		"babel-jest": "^27.0.6",
-		"jest": "^27.0.6",
-		"rollup": "^2.53.3",
-		"rollup-plugin-svelte": "^7.1.0",
-		"sveld": "^0.8.2",
-		"svelte": "^3.40.2",
-		"svelte-check": "^2.2.3",
-		"svelte-jester": "^1.7.0"
-	},
-	"jest": {
-		"transform": {
-			"^.+\\.js$": "babel-jest",
-			"^.+\\.svelte$": "svelte-jester"
-		},
-		"testMatch": [
-			"**/?(*.)spec.js?(x)"
-		],
-		"testEnvironment": "jsdom",
-		"moduleFileExtensions": [
-			"js",
-			"svelte"
-		],
-		"setupFilesAfterEnv": [
-			"@testing-library/jest-dom/extend-expect"
-		]
-	}
+  "name": "svelte-fast-marquee",
+  "version": "0.5.0",
+  "description": "A Marquee component for Svelte inspired by react-fast-marquee.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
+  "types": "types/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "svelte-check": "svelte-check",
+    "prepublishOnly": "npm run svelte-check && npm run test && npm run build"
+  },
+  "files": [
+    "types",
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "svelte",
+    "marquee",
+    "svelte-component",
+    "component",
+    "fast-marquee"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abosch19/svelte-fast-marquee"
+  },
+  "bugs": {
+    "url": "https://github.com/abosch19/svelte-fast-marquee/issues"
+  },
+  "author": {
+    "email": "abosch19@gmail.com",
+    "name": "Alex Bosch",
+    "url": "https://github.com/abosch19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "rollup": "^2.53.3",
+    "rollup-plugin-svelte": "^7.1.0",
+    "sveld": "^0.8.2",
+    "svelte": "^3.40.2",
+    "svelte-check": "^2.2.3"
+  }
 }
