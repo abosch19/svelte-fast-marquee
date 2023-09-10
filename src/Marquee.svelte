@@ -3,7 +3,7 @@
 	 * Custom style
 	 * @type {string}
 	 */
-	export let style = {};
+	export let style = "";
 
 	/**
 	 * Pause on hover
