@@ -1,3 +1,1 @@
-import Marquee from './Marquee.svelte'
-
-export default Marquee
+export { default, default as Marquee } from './Marquee.svelte';
