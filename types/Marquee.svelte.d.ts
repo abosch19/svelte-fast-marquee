@@ -2,6 +2,12 @@ import type { SvelteComponentTyped } from "svelte";
 
 export interface MarqueeProps {
   /**
+   * Custom style
+   * @default {}
+   */
+  style?: string;
+
+  /**
    * Pause on hover
    * @default false
    */
