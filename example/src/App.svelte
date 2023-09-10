@@ -16,7 +16,7 @@
       the officially supported framework, also powered by Vite!
     </p>
   </Marquee>
-  <Marquee class="secondMarquee" speed={10} gradient>
+  <Marquee speed={10} gradient --gradientColor="rgba(255, 200, 200, 1)" --gradientWidth="30px" pauseOnHover>
     <p>
       Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
       apps.
@@ -26,7 +26,7 @@
       the officially supported framework, also powered by Vite!
     </p>
   </Marquee>
-  <Marquee direction='right' speed={500} play={false}>
+  <Marquee direction='right' speed={500} play={false} pauseOnClick>
     <img src={logo} alt="Svelte Logo" />
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="NPM"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Github"/>
@@ -37,10 +37,6 @@
   :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  :global(.secondMarquee) {
-    margin-left: -100px;
   }
 
   main {

@@ -1,5 +1,11 @@
 <script>
 	/**
+	 * Custom style
+	 * @type {string}
+	 */
+	export let style = {};
+
+	/**
 	 * Pause on hover
 	 * @type {boolean}
 	 */
@@ -38,7 +44,7 @@
 	 * Custom class
 	 * @type {string}
 	 */
-	 export { className as class };
+	export { className as class };
 
 	let containerWidth;
 	let marqueeWidth;
@@ -47,33 +53,25 @@
 		marqueeWidth < containerWidth
 			? containerWidth / speed
 			: marqueeWidth / speed;
-
-	$: _style = `
-		--pause-on-hover: ${pauseOnHover ? "paused" : "running"};
-		--pause-on-click: ${pauseOnClick ? "paused" : "running"};
-	`;
-
-	$: _marqueeStyle = `
-		--play: ${play ? "running" : "paused"};
-		--direction: ${direction === "left" ? "normal" : "reverse"};
-		--duration: ${duration}s;
-	`;
-
-	$: console.log(className);
 </script>
 
 <div
+	style={style}
 	class="marquee-container {className}"
-	style={_style}
 	bind:clientWidth={containerWidth}
+	style:--play={play}
+	style:--direction={direction === "left" ? "normal" : "reverse"}
+	style:--duration={duration + "s"}
+	style:--pause-on-hover={pauseOnHover ? "paused" : "running"}
+	style:--pause-on-click={pauseOnClick ? "paused" : "running"}
 >
 	{#if gradient}
 		<div class="gradient" />
 	{/if}
-	<div class="marquee" style={_marqueeStyle} bind:clientWidth={marqueeWidth}>
+	<div class="marquee" bind:clientWidth={marqueeWidth}>
 		<slot />
 	</div>
-	<div class="marquee" style={_marqueeStyle}>
+	<div class="marquee">
 		<slot />
 	</div>
 </div>
@@ -125,11 +123,15 @@
 
 	.gradient::after,
 	.gradient::before {
-		background: linear-gradient(to right, white, transparent);
+		background: linear-gradient(
+			to right,
+			var(--gradientColor, white),
+			transparent
+		);
 		content: "";
 		height: 100%;
 		position: absolute;
-		width: 10%;
+		width: var(--gradientWidth, 10%);
 		z-index: 2;
 	}
 

@@ -46,7 +46,7 @@
     "rollup": "^2.53.3",
     "rollup-plugin-svelte": "^7.1.0",
     "sveld": "latest",
-    "svelte": "^3.40.2",
+    "svelte": "3.46.6",
     "svelte-check": "^2.2.3"
   }
 }
