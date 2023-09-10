@@ -2,6 +2,7 @@
 A Marquee component for Svelte inspired by [react-fast-marquee](https://github.com/justin-chu/react-fast-marquee).
 
 [![npm](https://img.shields.io/npm/v/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
+[![npm downloads](https://img.shields.io/npm/dm/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
 [![npm license](https://img.shields.io/npm/l/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/svelte-fast-marquee)](https://bundlephobia.com/result?p=svelte-fast-marquee)
 [![npm type definitions](https://img.shields.io/npm/types/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
@@ -62,6 +63,7 @@ A sample file might look like this:
 | `style`           | `string`                    | ``                | The inline style for the container div.                  |
 | `class`           | `string`                    | ``                | The name of the css class to style the container div.    |
 | `play`            | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
+| `speed`           | `number`                    | `100`              | The speed of the marquee in pixels per second            |
 | `pauseOnHover`    | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
 | `pauseOnClick`    | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
 | `direction`       | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
