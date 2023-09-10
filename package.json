@@ -2,14 +2,10 @@
   "name": "svelte-fast-marquee",
   "version": "0.6.1",
   "description": "A Marquee component for Svelte inspired by react-fast-marquee.",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "svelte": "src/index.js",
-  "types": "types/index.d.ts",
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
-    "build:watch": "rollup -c -w",
+    "build": "svelte-package",
     "svelte-check": "svelte-check --workspace src",
     "prepublishOnly": "npm run svelte-check && npm run build"
   },
@@ -43,10 +39,21 @@
     "@babel/core": "7.14.8",
     "@babel/preset-env": "7.14.8",
     "@rollup/plugin-node-resolve": "13.0.4",
+    "@sveltejs/package": "2.2.2",
+    "@sveltejs/vite-plugin-svelte": "2.4.5",
     "rollup": "2.53.3",
     "rollup-plugin-svelte": "7.1.0",
     "sveld": "0.19.0",
-    "svelte": "4.2.0",
-    "svelte-check": "3.5.1"
+    "svelte-check": "3.5.1",
+    "vite": "4.4.9"
+  },
+  "dependencies": {
+    "svelte": "4.2.0"
+  },
+  "default": "./dist/index.js",
+  "exports": {
+    "./Marquee.svelte": {
+      "svelte": "./dist/Marquee.svelte"
+    }
   }
 }
