@@ -10,7 +10,7 @@
   "scripts": {
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
-    "svelte-check": "svelte-check",
+    "svelte-check": "svelte-check --workspace src",
     "prepublishOnly": "npm run svelte-check && npm run build"
   },
   "files": [
