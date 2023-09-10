@@ -16,7 +16,7 @@
       the officially supported framework, also powered by Vite!
     </p>
   </Marquee>
-  <Marquee speed={10} gradient --gradientColor="rgba(255, 200, 200, 1)" --gradientWidth="30px" pauseOnHover>
+  <Marquee speed={10} gradient --gradientColor="rgba(255, 200, 200, 1)" --gradientWidth="50px" pauseOnHover>
     <p>
       Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
       apps.

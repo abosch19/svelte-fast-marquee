@@ -57,11 +57,14 @@ A sample file might look like this:
 
 ## Props
 
-| Property        | Type                        | Default           | Description                                              |
-| :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
-| `class`         | `string`                    | ``                | The name of the css class to style the container div.    |
-| `play`          | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
-| `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
-| `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
-| `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
-| `gradient`      | `boolean`                   | `false`           | Whether to show a gradient on right and left             |
+| Property          | Type                        | Default           | Description                                              |
+| :---------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
+| `style`           | `string`                    | ``                | The inline style for the container div.                  |
+| `class`           | `string`                    | ``                | The name of the css class to style the container div.    |
+| `play`            | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
+| `pauseOnHover`    | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
+| `pauseOnClick`    | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
+| `direction`       | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
+| `gradient`        | `boolean`                   | `false`           | Whether to show a gradient on right and left             |
+| `--gradientWidth` | `string`                    | "10%"             | The width of the gradient on either side.                |
+| `--gradientColor` | `string`                    | "white"           | The color of the gradient                                |
