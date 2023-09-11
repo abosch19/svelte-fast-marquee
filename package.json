@@ -5,15 +5,14 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
+    "dev": "vite dev",
     "build": "svelte-package",
     "test": "vitest",
     "svelte-check": "svelte-check --workspace src",
     "prepublishOnly": "npm run svelte-check && npm run test && npm run build"
   },
   "files": [
-    "types",
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "svelte",
@@ -41,6 +40,7 @@
     "@babel/preset-env": "7.14.8",
     "@happy-dom/global-registrator": "^11.0.2",
     "@rollup/plugin-node-resolve": "13.0.4",
+    "@sveltejs/kit": "1.24.1",
     "@sveltejs/package": "2.2.2",
     "@sveltejs/vite-plugin-svelte": "2.4.5",
     "@testing-library/svelte": "4.0.3",
