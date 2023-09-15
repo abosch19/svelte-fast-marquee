@@ -100,9 +100,11 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		gap: var(--gap, 0);
 		animation: scroll var(--duration) linear infinite;
 		animation-play-state: var(--play);
 		animation-direction: var(--direction);
+		padding-right: var(--gap, 0);
 	}
 
 	@keyframes scroll {
