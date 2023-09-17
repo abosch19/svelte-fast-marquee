@@ -26,6 +26,16 @@ If you're using yarn, run:
 yarn add svelte-fast-marquee
 ```
 
+If you're using bun, run:
+
+```sh
+bun add svelte-fast-marquee
+```
+
+## Documentation
+
+You can find the documentation [here](https://svelte-fast-marquee-docs.vercel.app/).
+
 ## Usage
 
 To use the component, first import `Marquee` into your file:
@@ -55,18 +65,3 @@ A sample file might look like this:
     <MyComponent />
 </Marquee>
 ```
-
-## Props
-
-| Property          | Type                        | Default           | Description                                              |
-| :---------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
-| `style`           | `string`                    | ``                | The inline style for the container div.                  |
-| `class`           | `string`                    | ``                | The name of the css class to style the container div.    |
-| `play`            | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
-| `speed`           | `number`                    | `100`              | The speed of the marquee in pixels per second            |
-| `pauseOnHover`    | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
-| `pauseOnClick`    | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
-| `direction`       | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
-| `gradient`        | `boolean`                   | `false`           | Whether to show a gradient on right and left             |
-| `--gradientWidth` | `string`                    | "10%"             | The width of the gradient on either side.                |
-| `--gradientColor` | `string`                    | "white"           | The color of the gradient                                |
