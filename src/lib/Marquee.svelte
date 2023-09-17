@@ -46,6 +46,12 @@
 	 */
 	export { className as class };
 
+	/**
+	 * Gap between elements
+	 * @type {string}
+	 */
+	export let gap = "0px";
+
 	let containerWidth;
 	let marqueeWidth;
 
@@ -59,6 +65,7 @@
 	style={style}
 	class="marquee-container {className}"
 	bind:clientWidth={containerWidth}
+	style:--gap={gap}
 	style:--play={play}
 	style:--direction={direction === "left" ? "normal" : "reverse"}
 	style:--duration={duration + "s"}
