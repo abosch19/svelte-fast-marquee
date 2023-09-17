@@ -39,6 +39,7 @@
     "@sveltejs/package": "2.2.2",
     "@testing-library/svelte": "4.0.3",
     "jsdom": "^22.1.0",
+    "typescript": "^5.2.2",
     "vite": "4.4.9",
     "vitest": "0.34.4",
     "vitest-dom": "^0.1.0"
@@ -46,10 +47,10 @@
   "dependencies": {
     "svelte": "4.2.0"
   },
-  "default": "./dist/index.js",
   "exports": {
-    "./Marquee.svelte": {
-      "svelte": "./dist/Marquee.svelte"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
     }
   }
 }
