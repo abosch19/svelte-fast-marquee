@@ -35,17 +35,17 @@
     "url": "https://github.com/abosch19"
   },
   "devDependencies": {
-    "@sveltejs/kit": "1.24.1",
+    "@sveltejs/kit": "^1.30.4",
     "@sveltejs/package": "2.2.2",
     "@testing-library/svelte": "4.0.3",
     "jsdom": "^22.1.0",
     "typescript": "^5.2.2",
-    "vite": "4.4.9",
+    "vite": "^4.5.3",
     "vitest": "0.34.4",
     "vitest-dom": "^0.1.0"
   },
   "dependencies": {
-    "svelte": "4.2.0"
+    "svelte": "^4.2.19"
   },
   "exports": {
     ".": {
