@@ -37,13 +37,13 @@
 	 * Gradient color
 	 * @type {string}
 	 */
-	export let gradientColor;
+	export let gradientColor = "";
 
 	/**
 	 * Gradient width
 	 * @type {string}
 	 */
-	export let gradientWidth;
+	export let gradientWidth = "";
 
 	let className = "";
 	/**
