@@ -34,10 +34,16 @@
 	export let play = true;
 
 	/**
-	 * Show lateral gradient
-	 * @type {boolean}
+	 * Gradient color
+	 * @type {string}
 	 */
-	export let gradient = false;
+	export let gradientColor;
+
+	/**
+	 * Gradient width
+	 * @type {string}
+	 */
+	export let gradientWidth;
 
 	let className = "";
 	/**
@@ -54,6 +60,7 @@
 
 	let containerWidth;
 	let marqueeWidth;
+	let gradient = !!gradientColor || !!gradientWidth;
 
 	$: duration =
 		marqueeWidth < containerWidth
@@ -67,6 +74,8 @@
 	bind:clientWidth={containerWidth}
 	style:--gap={gap}
 	style:--play={play}
+	style:--gradientColor={gradientColor}
+	style:--gradientWidth={gradientWidth}
 	style:--direction={direction === "left" ? "normal" : "reverse"}
 	style:--duration={duration + "s"}
 	style:--pause-on-hover={pauseOnHover ? "paused" : "running"}
