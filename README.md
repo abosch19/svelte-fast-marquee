@@ -34,7 +34,7 @@ bun add svelte-fast-marquee
 
 ## Documentation
 
-You can find the documentation [here](https://svelte-fast-marquee-docs.vercel.app/).
+You can find the documentation [here](https://svelte-fast-marquee-website.vercel.app/).
 
 ## Usage
 
