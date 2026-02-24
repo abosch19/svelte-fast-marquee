@@ -32,6 +32,12 @@ If you're using bun, run:
 bun add svelte-fast-marquee
 ```
 
+## Compatibility
+
+This package supports Svelte 3, 4, and 5.
+
+`svelte-fast-marquee` declares `svelte` as a peer dependency, so your app should provide its own compatible `svelte` version.
+
 ## Documentation
 
 You can find the documentation [here](https://svelte-fast-marquee-website.vercel.app/).
