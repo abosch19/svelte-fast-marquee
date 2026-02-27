@@ -4,6 +4,7 @@
   "description": "A Marquee component for Svelte inspired by react-fast-marquee.",
   "type": "module",
   "main": "dist/index.js",
+  "svelte": "./dist/index.js",
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-package",
@@ -36,16 +37,17 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "^1.30.4",
-    "@sveltejs/package": "2.2.2",
-    "@testing-library/svelte": "4.0.3",
+    "@sveltejs/package": "2.5.7",
+    "@testing-library/svelte": "5.3.1",
     "jsdom": "^22.1.0",
+    "svelte": "5.53.3",
     "typescript": "^5.2.2",
     "vite": "^4.5.3",
     "vitest": "0.34.4",
     "vitest-dom": "^0.1.0"
   },
-  "dependencies": {
-    "svelte": "^4.2.19"
+  "peerDependencies": {
+    "svelte": "^3.44.0 || ^4.0.0 || ^5.0.0"
   },
   "exports": {
     ".": {
