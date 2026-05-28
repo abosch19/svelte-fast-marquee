@@ -82,7 +82,7 @@
 	style:--pause-on-click={pauseOnClick ? "paused" : "running"}
 >
 	{#if gradient}
-		<div class="gradient" data-testid="marquee-gradient" />
+		<div class="gradient" data-testid="marquee-gradient"></div>
 	{/if}
 	<div class="marquee" bind:clientWidth={marqueeWidth} data-testid="marquee-slot">
 		<slot />

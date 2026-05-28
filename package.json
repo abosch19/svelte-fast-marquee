@@ -36,14 +36,16 @@
     "url": "https://github.com/abosch19"
   },
   "devDependencies": {
-    "@sveltejs/kit": "^1.30.4",
+    "@sveltejs/adapter-auto": "^3",
+    "@sveltejs/kit": "^2",
     "@sveltejs/package": "2.5.7",
+    "@sveltejs/vite-plugin-svelte": "^4",
     "@testing-library/svelte": "5.3.1",
-    "jsdom": "^22.1.0",
+    "jsdom": "^25",
     "svelte": "5.53.3",
     "typescript": "^5.2.2",
-    "vite": "^4.5.3",
-    "vitest": "0.34.4",
+    "vite": "^5",
+    "vitest": "^2",
     "vitest-dom": "^0.1.0"
   },
   "peerDependencies": {
