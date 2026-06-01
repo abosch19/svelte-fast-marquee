@@ -73,7 +73,7 @@
 	class="marquee-container {className}"
 	bind:clientWidth={containerWidth}
 	style:--gap={gap}
-	style:--play={play}
+	style:--play={play ? "running" : "paused"}
 	style:--gradientColor={gradientColor}
 	style:--gradientWidth={gradientWidth}
 	style:--direction={direction === "left" ? "normal" : "reverse"}
