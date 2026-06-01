@@ -78,8 +78,8 @@
 	style:--gradientWidth={gradientWidth}
 	style:--direction={direction === "left" ? "normal" : "reverse"}
 	style:--duration={duration + "s"}
-	style:--pause-on-hover={pauseOnHover ? "paused" : "running"}
-	style:--pause-on-click={pauseOnClick ? "paused" : "running"}
+	style:--pause-on-hover={pauseOnHover || !play ? "paused" : "running"}
+	style:--pause-on-click={pauseOnClick || !play ? "paused" : "running"}
 >
 	{#if gradient}
 		<div class="gradient" data-testid="marquee-gradient"></div>
