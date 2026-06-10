@@ -5,7 +5,7 @@ A fast, lightweight **marquee component for Svelte**, inspired by [react-fast-ma
 [![npm](https://img.shields.io/npm/v/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
 [![npm downloads](https://img.shields.io/npm/dm/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
 [![npm license](https://img.shields.io/npm/l/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
-[![npm bundle size](https://img.shields.io/bundlephobia/min/svelte-fast-marquee)](https://bundlephobia.com/result?p=svelte-fast-marquee)
+[![npm bundle size](https://img.shields.io/bundlejs/size/svelte-fast-marquee)](https://bundlejs.com/?q=svelte-fast-marquee)
 [![npm type definitions](https://img.shields.io/npm/types/svelte-fast-marquee)](https://www.npmjs.com/package/svelte-fast-marquee)
 
 - ⚡ **CSS-driven animation** — no JavaScript running per frame, zero dependencies
