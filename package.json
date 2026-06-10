@@ -1,7 +1,7 @@
 {
   "name": "svelte-fast-marquee",
   "version": "1.1.2",
-  "description": "A Marquee component for Svelte inspired by react-fast-marquee.",
+  "description": "Svelte marquee component — a fast, CSS-driven, drop-in marquee for Svelte and SvelteKit inspired by react-fast-marquee. SSR-friendly, TypeScript types, pauseOnHover, gradient fade.",
   "type": "module",
   "main": "dist/index.js",
   "svelte": "./dist/index.js",
@@ -17,9 +17,18 @@
   "keywords": [
     "svelte",
     "marquee",
+    "svelte-marquee",
     "svelte-component",
+    "sveltekit",
+    "svelte5",
     "component",
-    "fast-marquee"
+    "fast-marquee",
+    "react-fast-marquee",
+    "ticker",
+    "scroller",
+    "carousel",
+    "animation",
+    "ssr"
   ],
   "license": "MIT",
   "repository": {
