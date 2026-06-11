@@ -17,7 +17,13 @@
 	<h1 class="text">Welcome</h1>
 	<h2 class="text">to</h2>
 	<h1 class="text">svelte-fast-marquee!</h1>
-	<h1 clas="text">[click me to pause]</h1>
+	<h1 class="text">[click me to pause]</h1>
+</Marquee>
+
+<Marquee autoFill pauseOnHover speed={35} gap="2rem" play={play}>
+	<span class="badge">autoFill</span>
+	<span class="badge">repeats short content</span>
+	<span class="badge">no manual duplicates</span>
 </Marquee>
 
 <button onclick={togglePlay}>{play ? 'Pause' : 'Resume'} animations</button>
@@ -30,5 +36,16 @@
 	
 	.text {
 		margin: 30px;
+	}
+
+	.badge {
+		border: 1px solid #ff3e00;
+		border-radius: 999px;
+		color: #ff3e00;
+		font-family: system-ui, sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+		padding: 12px 18px;
+		white-space: nowrap;
 	}
 </style>

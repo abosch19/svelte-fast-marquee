@@ -15,7 +15,7 @@ A fast, lightweight **marquee component for Svelte**, inspired by [react-fast-ma
 - 🦾 **TypeScript definitions** included
 - 🖱 **Pause on hover / click** (`pauseOnHover`, `pauseOnClick`)
 - 🌈 **Gradient fade** at the edges (`gradientColor`, `gradientWidth`)
-- 🎛 Control **speed, direction, gap and play state**
+- 🎛 Control **speed, direction, gap, play state and auto fill**
 
 [![demogif](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)](https://media.giphy.com/media/eKiQ1t5UuSj76KFNqg/giphy.gif)
 
@@ -91,7 +91,7 @@ A sample file might look like this:
   import Marquee from 'svelte-fast-marquee';
 </script>
 
-<Marquee speed={40} pauseOnHover gap="3rem">
+<Marquee speed={40} pauseOnHover autoFill gap="3rem">
   <img src="/logo1.svg" alt="Logo 1" />
   <img src="/logo2.svg" alt="Logo 2" />
   <img src="/logo3.svg" alt="Logo 3" />
@@ -128,6 +128,7 @@ A sample file might look like this:
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `play` | `boolean` | `true` | Whether the marquee is animating. |
+| `autoFill` | `boolean` | `false` | Whether to repeat children enough times to fill empty space in the marquee. |
 | `speed` | `number` | `100` | Animation speed in pixels/second. |
 | `direction` | `"left" \| "right"` | `"left"` | Scroll direction. |
 | `pauseOnHover` | `boolean` | `false` | Pause the animation on hover. |

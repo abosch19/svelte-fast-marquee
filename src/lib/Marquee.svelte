@@ -10,6 +10,12 @@
 	 * @type {boolean}
 	 */
 	export let pauseOnHover = false;
+
+	/**
+	 * Automatically repeat children to fill empty space in the marquee
+	 * @type {boolean}
+	 */
+	export let autoFill = false;
 	/**
 	 * Pause on click
 	 * @type {boolean}
@@ -62,6 +68,11 @@
 	let marqueeWidth;
 	let gradient = !!gradientColor || !!gradientWidth;
 
+	$: multiplier =
+		autoFill && containerWidth && marqueeWidth
+			? Math.max(1, Math.ceil(containerWidth / marqueeWidth))
+			: 1;
+
 	$: duration =
 		marqueeWidth < containerWidth
 			? containerWidth / speed
@@ -84,11 +95,22 @@
 	{#if gradient}
 		<div class="gradient" data-testid="marquee-gradient"></div>
 	{/if}
-	<div class="marquee" bind:clientWidth={marqueeWidth} data-testid="marquee-slot">
-		<slot />
+	<div class="marquee" data-testid="marquee-slot">
+		<div class="marquee-content" bind:clientWidth={marqueeWidth}>
+			<slot />
+		</div>
+		{#each Array(multiplier - 1) as _}
+			<div class="marquee-content">
+				<slot />
+			</div>
+		{/each}
 	</div>
 	<div class="marquee" data-testid="marquee-slot">
-		<slot />
+		{#each Array(multiplier) as _}
+			<div class="marquee-content">
+				<slot />
+			</div>
+		{/each}
 	</div>
 </div>
 
@@ -121,6 +143,14 @@
 		animation-play-state: var(--play);
 		animation-direction: var(--direction);
 		padding-right: var(--gap, 0);
+	}
+
+	.marquee-content {
+		flex: 0 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: var(--gap, 0);
 	}
 
 	@keyframes scroll {
